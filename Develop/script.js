@@ -9,7 +9,13 @@ function writePassword() {
   passwordText.value = password;
 
   function generatePassword() {
-      let passLength = prompt("Enter password character lenth, must be betwee 8 and 128");
+    let passResult = "Success" ;
+    let passAvail = "" ;
+    let lowerAvail = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"] ;
+    let upperAvail = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"] ;
+    let numerAvail = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"] ;
+    let specialAvail = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "=", "+", ":"] ;
+    let passLength = prompt("Enter password character lenth, must be betwee 8 and 128");
       parseInt(passLength);
       if (isNaN(passLength)) {
         alert ("You must input a number");
@@ -62,7 +68,7 @@ function writePassword() {
         return null;
       }
       if (confirm("Selected Password Criteria:\n" + "Password Length:   " + passLength + "\n" + "Lower Case?:   " + passLower + "\n" + "Upper Case?:   " + passUpper + "\n" + "Numeric values?:   " + passNumer + "\n" + "Special characters?:   " + passSpecial) == true) {
-        return "Success" ;
+        return passResult ;
       } else {
         return null;
       }
