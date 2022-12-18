@@ -69,6 +69,8 @@ function writePassword() {
     console.log(passSpecial) ;
     console.log(passConcat) ;
 
+        let concatLength = passConcat.length
+
       if (passLower) ;
       else if (passUpper) ;
       else if (passNumer) ;
@@ -80,10 +82,12 @@ function writePassword() {
       var createResult = function() {
         let passResult = [] ;
         for (var i = 0; i < passLength; i++) {
-          passResult += passResult.push(passConcat[Math.floor(Math.random() * passConcat.length)]);
+          passResult.push(passConcat[Math.floor(Math.random() * concatLength)]);
           console.log(passResult);
-          return passResult ;
+          //return passResult ;
         }
+        passResult = passResult.join('');
+        return passResult ;
       }
       if (confirm("Selected Password Criteria:\n" + "Password Length:   " + passLength + "\n" + "Lower Case?:   " + passLower + "\n" + "Upper Case?:   " + passUpper + "\n" + "Numeric values?:   " + passNumer + "\n" + "Special characters?:   " + passSpecial) == true) {
         //console.log(passResult) ;
