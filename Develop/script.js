@@ -61,7 +61,7 @@ function writePassword() {
         alert ("You must choose at least one character type")
         return null;
       }
-      if (confirm("Selected Password Criteria:\n" + "Password Length: " + passLength + "\n" + "Lower Case?: " + passUpper + "\n" + "Upper Case?: " + passUpper + "\n" + "Numeric values?: " + passNumer + "\n" + "Special characters?: " + passSpecial) == true) {
+      if (confirm("Selected Password Criteria:\n" + "Password Length:   " + passLength + "\n" + "Lower Case?:   " + passLower + "\n" + "Upper Case?:   " + passUpper + "\n" + "Numeric values?:   " + passNumer + "\n" + "Special characters?:   " + passSpecial) == true) {
         return "Success" ;
       } else {
         return null;
